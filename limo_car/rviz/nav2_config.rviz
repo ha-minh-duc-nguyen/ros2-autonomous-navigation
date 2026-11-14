@@ -1,0 +1,91 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+  - Class: nav2_rviz_plugins/Navigation 2
+    Name: Navigation 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane: XY
+      Reference Frame: <Fixed Frame>
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Topic:
+        Value: /robot_description
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Names: true
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Enabled: true
+      Topic: /scan
+      Reliability Policy: Best Effort
+      Durability Policy: Volatile
+      Style: Flat Squares
+      Size (Pixels): 3
+    - Class: rviz_default_plugins/Map
+      Name: Map
+      Enabled: true
+      Topic: /map
+      Update Topic: /map_updates
+      Reliability Policy: Best Effort
+      Durability Policy: Volatile
+      Color Scheme: map
+      Alpha: 0.7
+    - Class: rviz_default_plugins/PoseArray
+      Name: Amcl Particle Swarm
+      Enabled: true
+      Topic: /particlecloud
+    - Class: rviz_default_plugins/Path
+      Name: Global Planner
+      Enabled: true
+      Topic: /plan
+      Color: 255; 0; 0
+    - Class: rviz_default_plugins/Path
+      Name: Controller
+      Enabled: true
+      Topic: /local_plan
+      Color: 0; 255; 255
+    - Class: rviz_default_plugins/Odometry
+      Name: Odometry
+      Enabled: true
+      Topic: /odom
+      Reliability Policy: Best Effort
+      Durability Policy: Volatile
+      Keep: 1
+      Shape: Arrow
+      Covariance:
+        Position: false
+        Orientation: false
+  Global Options:
+    Fixed Frame: map
+    Background Color: 48; 48; 48
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Topic: /clicked_point
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Scale: 40
+      Target Frame: <Fixed Frame>
+Window Geometry:
+  Height: 900
+  Width: 1400
